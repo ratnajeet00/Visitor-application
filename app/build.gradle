@@ -32,7 +32,6 @@ android {
 }
 
 dependencies {
-
     implementation libs.appcompat
     implementation libs.material
     implementation libs.constraintlayout
@@ -41,6 +40,21 @@ dependencies {
     testImplementation libs.junit
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
+
+    // Retrofit for API calls
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    // Picasso for image loading (if you are still using it in your project)
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    // Glide for image loading in the approval activity
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.15.1'
+
+    // OkHttp for networking (if you need to use it with Retrofit)
+    implementation 'com.squareup.okhttp3:okhttp:4.10.0'
+
+    // Notification support for Android
+    implementation 'androidx.core:core:1.10.0'
 }

@@ -1,4 +1,3 @@
-// MainActivity.java
 package com.example.myapplication;
 
 import android.content.Intent;
@@ -68,6 +67,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void submitForm() {
+        // Validate inputs
+        if (name.getText().toString().isEmpty() || phone.getText().toString().isEmpty() ||
+                email.getText().toString().isEmpty() || idProof.getText().toString().isEmpty()) {
+            Toast.makeText(MainActivity.this, "Please fill all fields", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         // Create request parts from EditText fields
         RequestBody namePart = RequestBody.create(MediaType.parse("text/plain"), name.getText().toString());
         RequestBody phonePart = RequestBody.create(MediaType.parse("text/plain"), phone.getText().toString());
@@ -82,6 +88,9 @@ public class MainActivity extends AppCompatActivity {
             byte[] photoBytes = byteArrayOutputStream.toByteArray();
             RequestBody photoRequestBody = RequestBody.create(MediaType.parse("image/jpeg"), photoBytes);
             photoPart = MultipartBody.Part.createFormData("photo", "photo.jpg", photoRequestBody);
+        } else {
+            Toast.makeText(this, "Please capture a photo", Toast.LENGTH_SHORT).show();
+            return;
         }
 
         // Make API call
@@ -101,14 +110,13 @@ public class MainActivity extends AppCompatActivity {
                             // Display success message
                             Toast.makeText(MainActivity.this, "Visitor registered successfully!", Toast.LENGTH_SHORT).show();
                         } else {
-                            Toast.makeText(MainActivity.this, "Registration failed", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, "Registration failed: " + response.message(), Toast.LENGTH_SHORT).show();
                         }
                     }
 
-
                     @Override
                     public void onFailure(Call<ResponseBody> call, Throwable t) {
-                        Toast.makeText(MainActivity.this, "API call failed", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "API call failed: " + t.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
     }

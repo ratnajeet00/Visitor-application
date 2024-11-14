@@ -16,4 +16,9 @@ public class ApiClient {
         }
         return retrofit;
     }
+
+    // Helper method to get ApiService instance
+    public static ApiService getApiService() {
+        return getRetrofitInstance().create(ApiService.class);
+    }
 }

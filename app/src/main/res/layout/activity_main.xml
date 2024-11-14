@@ -1,75 +1,60 @@
-<!-- res/layout/activity_main.xml -->
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp">
 
-    <!-- Visitor's Name -->
     <EditText
         android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Visitor's Name"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:padding="10dp" />
+        android:hint="Name"
+        android:inputType="text"
+        android:minHeight="48dp" />
 
-    <!-- Phone Number -->
     <EditText
         android:id="@+id/phone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Phone Number"
         android:inputType="phone"
-        android:minHeight="48dp"
-        android:padding="10dp" />
+        android:minHeight="48dp" />
 
-    <!-- Email Address -->
     <EditText
         android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Email Address"
+        android:hint="Email"
         android:inputType="textEmailAddress"
-        android:minHeight="48dp"
-        android:padding="10dp" />
+        android:minHeight="48dp" />
 
-    <!-- ID Proof -->
     <EditText
         android:id="@+id/idProof"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="ID Proof (e.g., Aadhar, Passport)"
+        android:hint="ID Proof"
         android:inputType="text"
-        android:minHeight="48dp"
-        android:padding="10dp" />
+        android:minHeight="48dp" />
 
-    <!-- Photo Capture Preview -->
     <ImageView
         android:id="@+id/photoImageView"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_gravity="center"
-        android:contentDescription="Photo preview"
-        android:src="@android:drawable/ic_menu_camera"
-        android:layout_marginTop="16dp" />
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Visitor Photo"
+        android:src="@android:drawable/ic_menu_camera" />
 
-    <!-- Capture Photo Button -->
     <Button
         android:id="@+id/capturePhotoButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Capture Photo"
-        android:layout_marginTop="16dp" />
+        android:text="Capture Photo" />
 
-    <!-- Submit Form Button -->
     <Button
         android:id="@+id/submitButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Submit"
-        android:layout_marginTop="16dp" />
+        android:text="Submit" />
 
 </LinearLayout>

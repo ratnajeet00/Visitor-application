@@ -9,6 +9,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
 
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -19,20 +21,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
-        <!-- AndroidManifest.xml -->
 
-
+        <!-- Set LoginActivity as the launcher activity -->
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:exported="true"
             android:theme="@style/Theme.MyApplication">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-    </application>
+        <!-- MainActivity for visitor registration -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApplication" />
 
+        <!-- ApprovalActivity for managing approvals -->
+        <activity
+            android:name=".ApprovalActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApplication" />
+
+    </application>
 </manifest>
