@@ -45,12 +45,12 @@ The server-side of the application can be implemented using any suitable technol
 3. **Notifications:** Visitors receive notifications about the status of their requests.
 
 # UI
-```
+
 ![WhatsApp Image 2024-11-25 at 22 47 13_64239004](https://github.com/user-attachments/assets/36cb707d-3edc-4020-b02c-08a65d7a0b8d)
 ![WhatsApp Image 2024-11-25 at 22 47 13_4b31604f](https://github.com/user-attachments/assets/5a27ca18-d9bd-4fa4-bdd1-78516306b7bc)
 ![WhatsApp Image 2024-11-25 at 22 47 13_c39425b6](https://github.com/user-attachments/assets/7fd5a5ee-5c97-4e43-91b3-06f1c8129033)
 
-```
+
 
 
 
