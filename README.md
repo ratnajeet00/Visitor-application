@@ -43,13 +43,14 @@ The server-side of the application can be implemented using any suitable technol
 1. **Visitor Registration:** Visitors can enter their details and capture a photo using the app.
 2. **Approval:** Authorized personnel can log in and view pending visitor requests. They can then approve or reject requests.
 3. **Notifications:** Visitors receive notifications about the status of their requests.
+   
+## UI
 
-# UI
-
-![WhatsApp Image 2024-11-25 at 22 47 13_64239004](https://github.com/user-attachments/assets/36cb707d-3edc-4020-b02c-08a65d7a0b8d) ![WhatsApp Image 2024-11-25 at 22 47 13_4b31604f](https://github.com/user-attachments/assets/5a27ca18-d9bd-4fa4-bdd1-78516306b7bc)![WhatsApp Image 2024-11-25 at 22 47 13_c39425b6](https://github.com/user-attachments/assets/7fd5a5ee-5c97-4e43-91b3-06f1c8129033)
-
-
-
+<div style="display: flex; gap: 10px; justify-content: center;">
+  <img src="https://github.com/user-attachments/assets/36cb707d-3edc-4020-b02c-08a65d7a0b8d" alt="UI 1" width="200"/>
+  <img src="https://github.com/user-attachments/assets/5a27ca18-d9bd-4fa4-bdd1-78516306b7bc" alt="UI 2" width="200"/>
+  <img src="https://github.com/user-attachments/assets/7fd5a5ee-5c97-4e43-91b3-06f1c8129033" alt="UI 3" width="200"/>
+</div>
 
 
 ## Contributing
