@@ -44,6 +44,9 @@ The server-side of the application can be implemented using any suitable technol
 2. **Approval:** Authorized personnel can log in and view pending visitor requests. They can then approve or reject requests.
 3. **Notifications:** Visitors receive notifications about the status of their requests.
 
+# UI
+![WhatsApp Image 2024-11-25 at 22 47 13_64239004](https://github.com/user-attachments/assets/36cb707d-3edc-4020-b02c-08a65d7a0b8d)
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit pull requests or report issues.
