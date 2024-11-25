@@ -4,100 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context=".ApprovalActivity">
 
-    <FrameLayout
-        android:id="@+id/frameLayout"
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pending Visitors"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/visitorsRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerInParent="true">
-
-        <!-- Visitor Name -->
-        <TextView
-            android:id="@+id/visitorName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Visitor Name"
-            android:textSize="18sp"
-            android:layout_gravity="top|start"
-            android:layout_marginTop="16dp"
-            android:layout_marginStart="16dp" />
-
-        <!-- Visitor Phone -->
-        <TextView
-            android:id="@+id/visitorPhone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Phone"
-            android:textSize="16sp"
-            android:layout_gravity="top|start"
-            android:layout_marginTop="48dp"
-            android:layout_marginStart="16dp" />
-
-        <!-- Visitor Email -->
-        <TextView
-            android:id="@+id/visitorEmail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Email"
-            android:textSize="16sp"
-            android:layout_gravity="top|start"
-            android:layout_marginTop="80dp"
-            android:layout_marginStart="16dp" />
-
-        <!-- Visitor ID Proof -->
-        <TextView
-            android:id="@+id/visitorIdProof"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ID Proof"
-            android:textSize="16sp"
-            android:layout_gravity="top|start"
-            android:layout_marginTop="112dp"
-            android:layout_marginStart="16dp" />
-
-        <!-- Visitor Photo -->
-        <ImageView
-            android:id="@+id/visitorPhoto"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_gravity="top|center_horizontal"
-            android:layout_marginTop="150dp"
-            android:src="@android:drawable/ic_menu_camera"/>
-
-        <!-- Visitor ID Text -->
-        <TextView
-            android:id="@+id/visitorIdText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Visitor ID"
-            android:textSize="18sp"
-            android:layout_gravity="top|start"
-            android:layout_marginTop="16dp"
-            android:layout_marginStart="16dp" />
-
-        <!-- Approve Button -->
-
-        <!-- Reject Button -->
-
-        <Button
-            android:id="@+id/approveButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|right"
-            android:layout_margin="100dp"
-            android:layout_marginBottom="32dp"
-            android:text="Approve" />
-
-        <Button
-            android:id="@+id/rejectButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|left"
-            android:layout_margin="100dp"
-            android:layout_marginBottom="16dp"
-            android:text="Reject" />
-
-    </FrameLayout>
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+

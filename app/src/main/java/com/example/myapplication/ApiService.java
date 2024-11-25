@@ -1,13 +1,17 @@
 package com.example.myapplication;
 
+import java.util.List;
+
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
+import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.Part;
+import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 public interface ApiService {
@@ -22,17 +26,12 @@ public interface ApiService {
             @Part MultipartBody.Part photo
     );
 
-    @POST("approveVisitor")
+    @GET("visitors")
+    Call<List<Visitor>> getPendingVisitors();
+
+    @POST("approveVisitor/{visitorId}")
     Call<ResponseBody> approveVisitor(
-            @Query("id") int id,
-            @Query("status") String status
+            @Path("visitorId") int visitorId,
+            @Body ApprovalRequest status
     );
-
-    // Get visitor details by ID
-    @GET("visitor")
-    Call<Visitor> getVisitorById(@Query("id") int visitorId);
-
-    // Get the next visitor based on the current visitorId
-    @GET("nextVisitor")
-    Call<Visitor> getNextVisitor(@Query("id") int visitorId);
 }
