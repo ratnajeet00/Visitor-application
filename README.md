@@ -33,7 +33,8 @@ The server-side of the application can be implemented using any suitable technol
 
 ## Setup and Installation
 
-1. Clone the repository: `git clone <repository_url>`
+1. Clone the repository:
+  ```git clone https://github.com/ratnajeet00/Visitor-application```
 2. Open the project in Android Studio.
 3. Build and run the application on an Android device or emulator.
 
